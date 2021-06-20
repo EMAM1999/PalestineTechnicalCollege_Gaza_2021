@@ -77,7 +77,7 @@ public class Point {
                   double x = in.nextDouble();
                   double y = in.nextDouble();
                   if ( exist(x, y, i) ) {
-                        System.out.println("\033[0;31mDuplicates points are NOT allowed [" + x + ", " + y + "]\033[0;30m");
+                        System.out.println("\033[0;31mDuplicates points are NOT allowed (" + x + ", " + y + ")\033[0;30m");
                         i--;
                   } else {
                         points[i][0] = x;
@@ -97,7 +97,7 @@ public class Point {
 
       private static void displayPoints() {
             for ( int i = 0; i < points.length; i++ ) {
-                  System.out.println("point (" + (i + 1) + ") -> " + "[" + points[i][0] + ", " + points[i][1] + "]");
+                  System.out.println("point " + (i + 1) + " -> " + "(" + points[i][0] + ", " + points[i][1] + ")");
             }
       }
 
@@ -121,8 +121,8 @@ public class Point {
                   double x2 = points[i + 1][0];
                   double y2 = points[i + 1][1];
                   String eq = calulateEquation(x1, y1, x2, y2);
-                  System.out.println("Line -> [" + x1 + ", " + y1 + "], [" + x2 + ", " + y2 + "]"
-                          + "\n\tEquation -> [ " + eq + " ]");
+                  System.out.println("Line -> (" + x1 + ", " + y1 + "), (" + x2 + ", " + y2 + ")"
+                          + "\n\tEquation -> " + eq );
             }
       }
 
@@ -147,7 +147,7 @@ public class Point {
                         }
                   }
             }
-            System.out.println("The Right Most Lowest Point [" + points[miny][0] + ", " + points[miny][1] + "]");
+            System.out.println("The Right Most Lowest Point (" + points[miny][0] + ", " + points[miny][1] + ")");
       }
 
       private static void displaySlopes() {
@@ -156,8 +156,8 @@ public class Point {
                   double y1 = points[i][1];
                   double x2 = points[i + 1][0];
                   double y2 = points[i + 1][1];
-                  System.out.println("Line -> [" + x1 + ", " + y1 + "], [" + x2 + ", " + y2 + "]"
-                          + "\nSlope -> [ " + getSlope(x1, y1, x2, y2) + " ]");
+                  System.out.println("Line -> (" + x1 + ", " + y1 + "), (" + x2 + ", " + y2 + ")"
+                          + "\nSlope ->  " + getSlope(x1, y1, x2, y2));
             }
       }
 
